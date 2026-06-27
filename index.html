@@ -97,6 +97,23 @@
 <script src="image-zoom.js"></script>
 <script src="isotpoe.js"></script>
 <script src="masonary.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+
+var grid = document.querySelector('.grid');
+var iso;
+
+imagesLoaded( grid, function() {
+  // init Isotope after all images have loaded
+  iso = new Isotope( grid, {
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.grid-sizer'
+    }
+  });
+});
+</script>
 
     </body>
 </html>
